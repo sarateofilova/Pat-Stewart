@@ -1,11 +1,12 @@
-
-title: Pat Stewart
-email: pdistewart@gmail.com
-description: Pat Stewart, musician, music producer, beatmaker, dj
+title: Hyde
+email: sarateofilova@gmail.com
+description: This is awesome!
+destination: docs
 baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "/su-fe2-hyde" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
-github_username:  jekyll
+twitter_username: sarateofilova
+github_username:  sarateofilova
 
 exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
@@ -20,7 +21,9 @@ plugins:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
+#   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+

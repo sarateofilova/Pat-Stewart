@@ -1,0 +1,33 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Jekyll theme by the best HTML&CSS course",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-exec": "^3.0.2"
+  },
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarateofilova/su-fe2-hyde.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarateofilova/su-fe2-hyde/issues"
+  },
+  "homepage": "https://github.com/sarateofilova/su-fe2-hyde#readme",
+  "keywords": []
+}
