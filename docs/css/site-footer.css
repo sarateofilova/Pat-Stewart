@@ -1,0 +1,34 @@
+.site-footer {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    z-index: 10;
+}
+.site-footer .social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer .social-media li {
+    list-style: none;
+    padding: 1em 0.5em 1em 0.5em;
+    /* margin-left: 1rem; */
+}
+
+.site-footer .social-media li i {
+    font-size: 1.8rem;
+    color: #000;
+}
+.site-footer .social-media li:hover i {
+    color: rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 1024px) {
+    .site-footer .social-media li i {
+        font-size: 1.3rem;
+        color: #000;
+    }
+}

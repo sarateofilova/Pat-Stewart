@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 100vw;
 }
 
 .header ul {
@@ -59,8 +60,7 @@
     height: auto;
     position: absolute;
     left: 50%; top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
   /* menu */
@@ -78,10 +78,7 @@
   cursor: pointer;
   padding: 2em 1.5em;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .header .menu-icon .navicon {
@@ -138,13 +135,11 @@
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,

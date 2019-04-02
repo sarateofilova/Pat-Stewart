@@ -1,0 +1,17 @@
+.tours {
+    max-width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    background: url('/images/tours_1.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.tours-content {
+
+}
+
+.tours-header h3 {
+    color: #FFF;
+}
