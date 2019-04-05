@@ -1,12 +1,16 @@
 .site-footer {
     background: rgb(255, 255, 255);
     width: 100%;
-    position: fixed;
+    position: sticky;
     bottom: 0;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
     display: flex;
     z-index: 10;
+    opacity: 0.8;
 }
 .site-footer .social-media {
+    padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -15,7 +19,6 @@
 .site-footer .social-media li {
     list-style: none;
     padding: 1em 0.5em 1em 0.5em;
-    /* margin-left: 1rem; */
 }
 
 .site-footer .social-media li i {

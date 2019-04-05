@@ -1,16 +1,23 @@
 /* header */
 
 .header {
-    background-color: #fff;
+    background-color: #FFF;
     box-shadow: 0 0 0.1rem 0 rgba(0,0,0,.1);
     padding: 0 0.5rem;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 100vw;
+    opacity: 0.9;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    overflow: hidden;
+    
 }
 
 .header ul {
