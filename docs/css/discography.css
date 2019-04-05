@@ -27,11 +27,12 @@
     flex-direction: column;
 }
 
-.album:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
+.album:hover { /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.1); 
-    transition: transform 0.4s;
+    transition: -webkit-transform 0.4s; 
+    transition: transform 0.4s; 
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .album a {
@@ -113,7 +114,8 @@
     height: auto;
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border: 1px solid rgba(0,0,0,0.2);
 }
 

@@ -13,6 +13,9 @@ exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.jso
 markdown: kramdown
 plugins:
   - jekyll-feed
+  
+sass:
+  sass_dir: _assets/css
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
