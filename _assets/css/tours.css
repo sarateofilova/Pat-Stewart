@@ -4,7 +4,7 @@
     overflow: hidden;
     background: url('/images/tours_1.jpg');
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: top;
     background-repeat: no-repeat;
 }
 

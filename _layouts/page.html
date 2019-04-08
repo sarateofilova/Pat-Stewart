@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+    {% if page.url == '#contact' %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/contact.css">
+    {% endif %}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   </head>
   <body>
+
+    {{ page.url }}
+    
       {% include header.html %}
 
       {% include home.html %}
