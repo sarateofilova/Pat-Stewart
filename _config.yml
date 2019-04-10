@@ -8,7 +8,7 @@ url: "http://sarateofilova.github.io" # the base hostname & protocol for your si
 twitter_username: sarateofilova
 github_username:  sarateofilova
 
-exclude: [ images, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
+exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
 # markdown: kramdown
 # plugins:
