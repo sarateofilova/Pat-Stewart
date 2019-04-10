@@ -3,8 +3,8 @@ email: sarateofilova@gmail.com
 description: Pat Stewart, musician, bass player, music producer, beatmaker
 destination: docs
 # baseurl: ""
-baseurl: "/Pat-Stewart/"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/Pat-Stewart"
+url: "http://sarateofilova.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sarateofilova
 github_username:  sarateofilova
 
