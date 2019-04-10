@@ -445,22 +445,22 @@ input {
   z-index: 1; }
 
 #image_6 {
-  background-image: url("/images/discography/disc_6_Lucas Martinez Project - Light and Shadows.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_6_Lucas Martinez Project - Light and Shadows.jpg"); }
 
 #image_5 {
-  background-image: url("/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg"); }
 
 #image_4 {
-  background-image: url("/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg"); }
 
 #image_3 {
-  background-image: url("/images/discography/disc_3_Ash Broke - Broken Dreams.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_3_Ash Broke - Broken Dreams.jpg"); }
 
 #image_2 {
-  background-image: url("/images/discography/disc_2_Funkacybin - Voyager.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_2_Funkacybin - Voyager.jpg"); }
 
 #image_1 {
-  background-image: url("/images/discography/disc_1_Brockaflower - Build It.jpg"); }
+  background-image: url("{{ site.baseurl }}/images/discography/disc_1_Brockaflower - Build It.jpg"); }
 
 /* 
 @media (min-width: 600px) and (max-width: 1920px) {
@@ -497,7 +497,7 @@ input {
   max-width: 100vw;
   height: 90vh;
   overflow: hidden;
-  background: url("/images/tours_1.jpg");
+  background: url("{{ site.baseurl }}/images/tours_1.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
