@@ -2,7 +2,7 @@
     max-width: 100vw;
     height: 90vh;
     overflow: hidden;
-    background: url('/Pat-Stewart/images/tours_1.jpg');
+    background: url("{{ site.baseurl }}/images/tours_1.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
