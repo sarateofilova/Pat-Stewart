@@ -56,45 +56,6 @@
     padding-top: 100%;
 }
 
-.album-image .image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-#image_6 {
-    background-image: url("../images/discography/disc_6_Lucas\ Martinez\ Project\ -\ Light\ and\ Shadows.jpg"); 
-}
-
-#image_5 {
-    background-image: url("../images/discography/disc_5_Ryan\ Hendricks\ -\ Old\ Zealand.jpg"); 
-}
-
-#image_4 {
-    background-image: url("../images/discography/disc_4_The\ Strowlini\ Orchestra\ -\ The\ Strowl.jpg"); 
-}
-
-#image_3 {
-    background-image: url("../images/discography/disc_3_Ash\ Broke\ -\ Broken\ Dreams.jpg"); 
-}
-
-#image_2 {
-    background-image: url("../images/discography/disc_2_Funkacybin\ -\ Voyager.jpg"); 
-}
-
-#image_1 {
-    background-image: url("../images/discography/disc_1_Brockaflower\ -\ Build\ It.jpg"); 
-}
-
 .album-image img {
     max-width: 100%;
     height: auto;
@@ -102,10 +63,6 @@
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid rgba(0,0,0,0.2);
-}
-
-.album-content {
-
 }
 
 .album-text h4, 
