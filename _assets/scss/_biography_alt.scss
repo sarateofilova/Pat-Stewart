@@ -1,8 +1,25 @@
 
-.home {
+
+
+
+.bio {
     display: block;
     margin: 0 auto;
     width: 100vw;
+    box-sizing: inherit;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    /* Article */
+
+    article {
+        padding: 0 1rem;
+        order: 2;
+    }
+
 
 
     /* Slider  */
@@ -23,9 +40,10 @@
     */
     .carousel{
         // width: 100%;
-        height: 85vh;
+        // height: 85vh;
         position: relative;
         padding-top: 100%;
+        padding-bottom: 100%;
         overflow: hidden;
     }
 
@@ -62,7 +80,6 @@
         left:0;
         z-index: 1;
         opacity: 0;
-        overflow: hidden;
     }
 
     .image-mobile {
@@ -78,15 +95,11 @@
         display: none;
     }
 
-    .landscape .image-mobile {
-        height: 85%;
-    }
-
 
     .slide.active,
     .slide.left,
     .slide.right{
-        z-index: 1;
+        z-index: 2;
         opacity: 1;
     }
 
@@ -155,24 +168,25 @@
 
     /**
     * ==========================
-    * Indicators
+    * Circles
     *
     */
-    .indicators{
+    .circles{
     width:100%;
     position: absolute;
     bottom: 10%;
-    z-index: 1;
+    // left: 10%;
+    z-index: 4;
     padding:0;
     text-align: center;
     }
 
-    .indicators li{
+    .circles li{
         width: 20px;
         height: 20px;
         display: inline-block;
         margin: 5px;
-        border:2px solid #fff;
+        border:2px solid #111;
         background: transparent;
         list-style-type: none;
         border-radius: 50%;
@@ -180,58 +194,12 @@
     transition:background 0.3s ease-out;
     }
 
-    // .indicators li.active{background:#555454}
+    .circles li.active{background:#111}
 
-    .indicators li:hover{background-color:#2b2b2b}
-
-    .indicators li:first-child.active,
-    .indicators li:nth-child(3).active {
-        background:#fff;
-        border:2px solid #fff;
-    }
-
-    .indicators li:nth-child(2).active {
-        background:#000;
-        border:2px solid #000;
-    }
-
-    .bgcolor {
-        background:#000;
-        border:2px solid #000;
-    }
-
-    
+    .circles li:hover{background-color:#2b2b2b}
 
 
 
-    /**
-    * ==========================
-    * Arrows 
-    *
-    */
-    .arrow{
-    width: 40px;
-    height: 40px;
-    position:absolute;
-    top:50%;
-    z-index: 1;
-    border-top:3px solid #7c7b7b;
-    border-right:3px solid #7c7b7b;
-    cursor:pointer;
-    transition:border-color 0.3s ease-out;
-    }
-
-    .arrow:hover{border-color:#93278f}
-
-    .arrow-left{
-    left:40px;
-    transform:rotate(225deg);
-    }
-
-    .arrow-right{
-    right:40px;
-    transform:rotate(45deg);
-    }
 
     /**
     * ==========================
@@ -251,25 +219,28 @@
         .carousel {
             padding-top: 0;
         }
-            
-        .image-mobile {
-            display: none;
-        }
-
-        .image-desctop { 
-            display: block;
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-        }
 
         .landscape .image-desctop {
             width: auto;
             height: 100%;
         } 
+        header {
+            order: 1;
+            width: 100%;
+        }
+    
+        .article {
+            order: 2;
+            flex: 0 0 60%;
+            max-width: 70rem;
+        }
+
+        .wrapper {
+            order: 3;
+            flex: 0 0 30%;
+        }
     }
 
 
 }
+

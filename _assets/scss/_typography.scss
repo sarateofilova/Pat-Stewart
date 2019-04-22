@@ -60,8 +60,8 @@ h1, h2, h3 {
 }
 
 h3 {
-    padding-top: 5rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: normal;
@@ -79,3 +79,7 @@ h3{ font-size: 1.953rem; }
 h4{ font-size: 1.5rem; }
 h5{ font-size: 1.25rem; }
 h6{ font-size: 1rem; }
+
+li {
+    list-style: none;
+}

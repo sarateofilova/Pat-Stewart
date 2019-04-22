@@ -6,130 +6,619 @@
     <title>Tours</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Pat Stewart, musician, bass player, music producer, beatmaker">
-    <link rel="stylesheet" href="/Pat-Stewart/css/site.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <!-- <script src="/currentpage.js"></script> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   </head>
   <body>
       <header class="header">
 
-  <div class="logo">
-      <a href="/">
-          <img src="/Pat-Stewart/images/logo:menu/LOGO_black.svg" alt="">
-      </a>
-  </div>
+    <div class="logo">
+        <a href="/">
+            <img src="/images/logo:menu/LOGO_black.svg" alt="">
+        </a>
+    </div>
 
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon button-collapses"></span></label>
 
-  <ul class="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#biography">Biography</a></li>
-      <li><a href="#discography">Discography</a></li>
-      <li><a href="#tours">Tours</a></li>
-      <li><a href="#contact">Contact</a></li>
-  </ul>
+    <ul class="menu navHighlighter">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#discography">Discography</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+    <script>
+        $(function() {
+
+// when we scroll down the window, do this:
+$(window).scroll(function(){
+
+    //Getting the scroll percentage
+    var windowHeight = $(window).height();
+    var scrollHeight = $(window).scrollTop();
+    var scrollPercentage =  (scrollHeight / windowHeight);
+    console.log(scrollPercentage);
+    
+    // if we have scrolled past 200, add the alternate class to nav bar
+    if(scrollPercentage > 1) {
+        $('.navHighlighter').addClass('scrolling');
+    } else {
+        $('.navHighlighter').removeClass('scrolling');
+    }
+    
+});
+
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top - 80
+      }, 1000);
+      return false;
+    }
+  }
+}); // code courtesy of CSS-Tricks
+
+// apply the class of nav-active to the current nav link
+$('a').on('click', function(e) {
+    e.preventDefault();
+    $('li.nav-active').removeClass('nav-active');
+    $(this).parent('li').addClass('nav-active');
+});
+
+
+// get an array of 'href' of each a tag
+
+var navLink = $('ul.navHighlighter a');
+console.log(navLink);
+var aArray = [];
+
+for(var i = 0; i < navLink.length; i++) {
+    console.log(i);
+    var aChild = navLink[i];
+    var navArray = $(aChild).attr('href');
+    console.log(navArray);
+    aArray.push(navArray);
+    console.log(aArray);
+    var selector = aArray.join(" , ");
+    console.log(selector);
+}
+
+$(window).scroll(function(){
+    var scrollTop = $(window).scrollTop();
+    var tops = [];
+    
+    $(selector).each(function(){
+        var top = $(this).position().top -90;
+        if(scrollTop > top) {
+            var id = $(this).attr('id');
+            $('.nav-active').removeClass('nav-active');
+            $('a[href="#'+id+'"]').parent().addClass('nav-active');
+        }
+        tops.push(top);
+    });
+
+});
+});
+
+    </script>
+
+
 
 </header>
-
-
-
+      
 
       <section class="home" id="home">
-                
-    <section class="slider">
-       
-        <input checked type='radio' name='slider' id='slide1-home'/>
-        <input type='radio' name='slider' id='slide2-home'/>
-        <input type='radio' name='slider' id='slide3-home'/>
+    <div class="wrapper">
 
-        <div class="slides">
-            <div class="container">
-                <div class="inner">
-                    <article class="image-home">
-                        <img class="image-mobile" src="/Pat-Stewart/images/home/home_1_Pat Stewart.jpg"/>
-                        <img class="image-desctop" src="/Pat-Stewart/images/home/hom_1_Pat Stewart_1024px.jpg"/>
-                    </article>
-                    <article class="image-home landscape">
-                        <img class="image-mobile" src="/Pat-Stewart/images/home/home_2_Pat Stewart.jpg"/>
-                        <img class="image-desctop" src="/Pat-Stewart/images/home/home_2_Pat Stewart_1024px.jpg"/>
-                    </article>
-                    <article class="image-home">
-                        <!-- <div class='caption'>
-                            <bar>A Small Elephant <a href="#">read more</a></bar>
-                        </div> -->
-                        <img class="image-mobile" src="/Pat-Stewart/images/home/home_3_Pat Stewart.jpg"/>
-                        <img class="image-desctop" src="/Pat-Stewart/images/home/home_3_Pat Stewart_1024px.jpg"/>
-                    </article>
-
+        <div class="carousel">
+            <div class="inner">
+                <div class="slide active">
+                    <img class="image-mobile" src="/images/home/home_1_Pat Stewart.jpg" alt="">
+                    <img class="image-desctop" src="/images/home/hom_1_Pat Stewart_1024px.jpg" alt="">
+                </div>
+                <div class="slide landscape">
+                    <img class="image-mobile" src="/images/home/home_2_Pat Stewart.jpg" alt="">
+                    <img class="image-desctop" src="/images/home/home_2_Pat Stewart_1024px.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img class="image-mobile" src="/images/home/home_3_Pat Stewart.jpg" alt="">                
+                    <img class="image-desctop" src="/images/home/home_3_Pat Stewart_1024px.jpg" alt="">                
                 </div>
             </div>
-        </div>
-        <div class="commands">
-            <label for='slide1-home'></label>
-            <label for='slide2-home'></label>
-            <label for='slide3-home'></label>     
-        </div>
-        <div class="active">
-            <label for='slide1-home'></label>
-            <label for='slide2-home'></label>
-            <label for='slide3-home'></label>
-        </div>
-    </section>
-</section>
-      <section class="bio" id='biography'>
-    <header>
-        <h3>Biography</h3>
-    </header>
-
-    <article class="article">
-        <p>Born in France and raised in New Zealand, Bassist, Keyboardist, Producer, Mix Engineer, Composer, and Arranger.</p>
-        <p><b>Pat Stewart</b> started playing bass in bands in High School, beginning a professional career as a Jazz and Pop Musician before the age of 18. Pat then completed a BMus in Jazz Performance on Double Bass and Electric Bass, during which he found a love of composition and production that has been a constant vein throughout his Musical expression ever since. </p>
-        <p>After spending several years playing and writing in original projects (Brockaflower/The Strowlini Orchestra) and as a session player (Louis Baker/Thomas Oliver/Zoë Moon/Deva Mahal), as well as Producer and Mix engineer (Funkacybin/Ryan Hendricks/Lucas Martinez Membrilla) Pat has relocated to Europe to continue study at the Koninklijk Conservatorium in Den Haag, The Netherlands.</p>
-        <p>Pat is available throughout Europe for Audio engineering, Teaching, and Performance.</p>
-    </article>
-
-    <section id="slider">
-       
-        <input checked type='radio' name='slider' id='slide1'/>
-        <input type='radio' name='slider' id='slide2'/>
-        <input type='radio' name='slider' id='slide3'/>
-
-        <div id="slides">
-            <div id="container">
-                <div class="inner">
-                    <article class="image">
-                        <img src="/Pat-Stewart/images/bio/bio_1_Pat Stewart.jpg"/>
-                    </article>
-                    <article class="image portrait">
-                        <!-- <div class='caption'>
-                            <bar>A Bubble on Flower</bar>
-                        </div> -->
-                        <img src="/Pat-Stewart/images/bio/bio_2_Pat Stewart.jpg"/>
-                    </article>
-                    <article class="image">
-                        <!-- <div class='caption'>
-                            <bar>A Small Elephant <a href="#">read more</a></bar>
-                        </div> -->
-                        <img src="/Pat-Stewart/images/bio/bio_3_Pat Stewart.jpg"/>
-                    </article>
-
-                </div>
+            <div class="arrows">
+                <div class="arrow arrow-left"></div>
+                <div class="arrow arrow-right"></div>
             </div>
         </div>
-        <div id="commands">
-            <label for='slide1'></label>
-            <label for='slide2'></label>
-            <label for='slide3'></label>     
-        </div>
-        <div id="active">
-            <label for='slide1'></label>
-            <label for='slide2'></label>
-            <label for='slide3'></label>
-        </div>
-    </section>
+        
+    </div>
+		<script type="text/JavaScript">
+
+/*
+ * We trigger the factory() function is different
+ * ways to support modular JavaScript libraries. See
+ * the 'Wrapping Up' section of the tutorial for
+ * more information
+ *
+ */
+;(function(factory){
+  
+  if (typeof define === 'function' && define.amd) {
+      define(['jquery'], factory);
+  } else if (typeof exports !== 'undefined') {
+      module.exports = factory(require('jquery'));
+  } else {
+      factory(jQuery);
+  }
+
+})(function($){
+  
+  /*
+	 * We define Zippy as a variable of type ‘function’. 
+   * Here, we use an anonymous function to ensure 
+   * that the logic inside the function is executed immediately. 
+	 *
+	 */
+  var Zippy = (function(element, settings){
+    
+    var instanceUid = 0;
+    
+    /*
+     * The constructor function for Zippy
+     *
+     */
+    function _Zippy(element, settings){
+      this.defaults = {
+        slideDuration: '3000',
+        speed: 500,
+        arrowRight: '.arrow-right',
+        arrowLeft: '.arrow-left'
+      };
+      
+      // We create a new property to hold our default settings after they
+      // have been merged with user supplied settings
+      this.settings = $.extend({},this,this.defaults,settings);
+      
+      // This object holds values that will change as the plugin operates
+      this.initials = {
+        currSlide : 0,
+        $currSlide: null,
+        totalSlides : false,
+        csstransitions: false
+      };
+      
+      // Attaches the properties of this.initials as direct properties of Zippy
+      $.extend(this,this.initials);
+      
+      // Here we'll hold a reference to the DOM element passed in
+      // by the $.each function when this plugin was instantiated
+      this.$el = $(element);
+      
+      // Ensure that the value of 'this' always references Zippy
+      this.changeSlide = $.proxy(this.changeSlide,this);
+      
+      // We'll call our initiator function to get things rolling!
+      this.init();
+      
+      // A little bit of metadata about the instantiated object
+      // This property will be incremented everytime a new Zippy carousel is created
+		 // It provides each carousel with a unique ID
+      this.instanceUid = instanceUid++;
+    }
+    
+    return _Zippy;
+  
+  })();
+  
+  /**
+	 * Called once per instance
+	 * Calls starter methods and associate the '.zippy-carousel' class
+	 * @params void
+	 * @returns void
+	 *
+	 */
+   Zippy.prototype.init = function(){
+    //Test to see if cssanimations are available
+    this.csstransitionsTest();
+    // Add a class so we can style our carousel
+    this.$el.addClass('zippy-carousel');
+    // Build out any DOM elements needed for the plugin to run
+    // Eg, we'll create an indicator dot for every slide in the carousel
+    this.build();
+    // Eg. Let the user click next/prev arrows or indicator dots
+    this.events();
+    // Bind any events we'll need for the carousel to function
+    this.activate();
+    // Start the timer loop to control progression to the next slide
+    this.initTimer();
+  };
+	
+	/**
+	 * Appropriated out of Modernizr v2.8.3
+	 * Creates a new DOM element and tests existence of properties on it's
+	 * Style object to see if CSSTransitions are available
+	 * @params void
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.csstransitionsTest = function(){
+		var elem = document.createElement('modernizr');
+		//A list of properties to test for
+		var props = ["transition","WebkitTransition","MozTransition","OTransition","msTransition"];
+		//Iterate through our new element's Style property to see if these properties exist
+		for ( var i in props ) {
+			var prop = props[i];
+			var result = elem.style[prop] !== undefined ? prop : false;
+			if (result){
+				this.csstransitions = result;
+				break;
+			} 
+		} 
+	};
+	
+	/**
+	 * Add the CSSTransition duration to the DOM Object's Style property
+	 * We trigger this function just before we want the slides to animate
+	 * @params void
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.addCSSDuration = function(){
+		var _ = this;
+		this.$el.find('.slide').each(function(){
+			this.style[_.csstransitions+'Duration'] = _.settings.speed+'ms';
+		});
+	}
+	
+	/**
+   * Remove the CSSTransition duration from the DOM Object's style property
+   * We trigger this function just after the slides have animated
+   * @params void
+   * @returns void
+   *
+   */
+	Zippy.prototype.removeCSSDuration = function(){
+		var _ = this;
+		this.$el.find('.slide').each(function(){
+			this.style[_.csstransitions+'Duration'] = '';
+		});
+	}
+	
+	/**
+	 * Creates a list of indicators based on the amount of slides
+	 * @params void
+	 * @returns void
+	 *
+	 */ 
+	Zippy.prototype.build = function(){
+		var $indicators = this.$el.append('<ul class="indicators" >').find('.indicators');
+		this.totalSlides = this.$el.find('.slide').length;
+		for(var i = 0; i < this.totalSlides; i++) $indicators.append('<li data-index='+i+'>');
+	};
+	
+	/**
+	 * Activates the first slide
+	 * Activates the first indicator
+	 * @params void
+	 * @returns void
+	 *
+	 */ 
+	Zippy.prototype.activate = function(){
+		this.$currSlide = this.$el.find('.slide').eq(0);
+		this.$el.find('.indicators li').eq(0).addClass('active');
+	};
+	
+	/**
+   * Associate event handlers to events
+   * For arrow events, we send the placement of the next slide to the handler
+   * @params void
+   * @returns void
+   *
+   */
+	Zippy.prototype.events = function(){
+		$('body')
+			.on('click',this.settings.arrowRight,{direction:'right'},this.changeSlide)
+			.on('click',this.settings.arrowLeft,{direction:'left'},this.changeSlide)
+			.on('click','.indicators li',this.changeSlide);
+	};
+	
+	/**
+	 * TIMER
+	 * Resets the timer
+	 * @params void
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.clearTimer = function(){
+		if (this.timer) clearInterval(this.timer);
+	};
+	
+	/**
+	 * TIMER
+	 * Initialise the timer
+	 * @params void
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.initTimer = function(){
+		this.timer = setInterval(this.changeSlide, this.settings.slideDuration);
+	};
+	
+	/**
+	 * TIMER
+	 * Start the timer
+	 * Reset the throttle to allow changeSlide to be executable
+	 * @params void
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.startTimer = function(){
+		this.initTimer();
+		this.throttle = false;
+	};
+	
+	/**
+	 * MAIN LOGIC HANDLER
+	 * Triggers a set of subfunctions to carry out the animation
+	 * @params	object	event
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype.changeSlide = function(e){
+		//Ensure that animations are triggered one at a time
+		if (this.throttle) return;
+		this.throttle = true;
+		
+		//Stop the timer as the animation is getting carried out
+		this.clearTimer();
+		
+		// Returns the animation direction (left or right)
+		var direction = this._direction(e);
+		
+		// Selects the next slide
+		var animate = this._next(e,direction);
+		if (!animate) return;
+		
+		//Active the next slide to scroll into view
+		var $nextSlide = this.$el.find('.slide').eq(this.currSlide).addClass(direction + ' active');
+		
+    if (!this.csstransitions){
+			this._jsAnimation($nextSlide,direction);
+		} else {
+			this._cssAnimation($nextSlide,direction);
+		}
+	};
+	
+	/**
+	 * Returns the animation direction, right or left
+	 * @params	object	event
+	 * @returns strong	animation direction
+	 *
+	 */
+	Zippy.prototype._direction = function(e){
+		var direction;
+		
+		// Default to forward movement
+		if (typeof e !== 'undefined'){
+			direction = (typeof e.data === 'undefined' ? 'right' : e.data.direction);
+		} else {
+			direction = 'right';
+		}
+		return direction;
+	};
+	
+	/**
+	 * Updates our plugin with the next slide number
+	 * @params	object	event
+	 * @params	string	animation direction
+	 * @returns boolean continue to animate?
+	 *
+	 */
+	Zippy.prototype._next = function(e,direction){
+		
+    // If the event was triggered by a slide indicator, we store the data-index value of that indicator
+		var index = (typeof e !== 'undefined' ? $(e.currentTarget).data('index') : undefined);
+		
+		//Logic for determining the next slide
+		switch(true){
+			//If the event was triggered by an indicator, we set the next slide based on index
+       case( typeof index !== 'undefined'):
+				if (this.currSlide == index){
+					this.startTimer();
+					return false;
+				} 
+				this.currSlide = index;
+			break;
+			case(direction == 'right' && this.currSlide < (this.totalSlides - 1)):
+				this.currSlide++;
+			break;
+			case(direction == 'right'):
+				this.currSlide = 0;
+			break;
+			case(direction == 'left' && this.currSlide === 0):
+				this.currSlide = (this.totalSlides - 1);
+			break;
+			case(direction == 'left'):
+				this.currSlide--;
+			break;
+		}
+		return true;
+	};
+	
+	/**
+	 * Executes the animation via CSS transitions
+	 * @params	object	Jquery object the next slide to slide into view
+	 * @params	string	animation direction
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype._cssAnimation = function($nextSlide,direction){
+    //Init CSS transitions
+		setTimeout(function(){
+			this.$el.addClass('transition');
+			this.addCSSDuration();
+			this.$currSlide.addClass('shift-'+direction);
+		}.bind(this),100);
+		
+		//CSS Animation Callback
+		//After the animation has played out, remove CSS transitions
+		//Remove unnecessary classes
+		//Start timer
+		setTimeout(function(){
+			this.$el.removeClass('transition');
+			this.removeCSSDuration();
+			this.$currSlide.removeClass('active shift-left shift-right');
+			this.$currSlide = $nextSlide.removeClass(direction);
+			this._updateIndicators();
+			this.startTimer();
+		}.bind(this),100 + this.settings.speed);
+	};
+	
+	/**
+	 * Executes the animation via JS transitions
+	 * @params	object	Jquery object the next slide to slide into view
+	 * @params	string	animation direction
+	 * @returns void
+	 *
+	 */
+	Zippy.prototype._jsAnimation = function($nextSlide,direction){
+		//Cache this reference for use inside animate functions
+		var _ = this;
+		
+     // See CSS for explanation of .js-reset-left
+		if(direction == 'right') _.$currSlide.addClass('js-reset-left');
+		
+     var animation = {};
+		animation[direction] = '0%';
+		
+		var animationPrev = {};
+		animationPrev[direction] = '100%';
+		
+		//Animation: Current slide
+		this.$currSlide.animate(animationPrev,this.settings.speed);
+		
+		//Animation: Next slide
+		$nextSlide.animate(animation,this.settings.speed,'swing',function(){
+			//Get rid of any JS animation residue
+			_.$currSlide.removeClass('active js-reset-left').attr('style','');
+			//Cache the next slide after classes and inline styles have been removed
+			_.$currSlide = $nextSlide.removeClass(direction).attr('style','');
+			_._updateIndicators();
+			_.startTimer();
+		});
+	};
+	
+  /**
+	 * Ensures the slide indicators are pointing to the currently active slide
+	 * @params	void
+	 * @returns	void
+	 *
+	 */
+	Zippy.prototype._updateIndicators = function(){
+		this.$el.find('.indicators li').removeClass('active').eq(this.currSlide).addClass('active');
+	};
+	
+	/**
+	 * Initialize the plugin once for each DOM object passed to jQuery
+	 * @params	object	options object
+	 * @returns void
+	 *
+	 */
+	$.fn.Zippy = function(options){
+    
+    return this.each(function(index,el){
+      
+      el.Zippy = new Zippy(el,options);
+      
+    });
+    
+  };
+  
+
+});
+
+// Custom options for the carousel
+var args = {
+	arrowRight : '.arrow-right', //A jQuery reference to the right arrow
+	arrowLeft : '.arrow-left', //A jQuery reference to the left arrow
+	speed : 1000, //The speed of the animation (milliseconds)
+	slideDuration : 4000 //The amount of time between animations (milliseconds)
+};
+
+$('.carousel').Zippy(args);
+
+
+
+		</script>
+	
 
 </section>
+
+      
+
+<section class="bio" id='biography'>
+        <header>
+            <h3>Biography</h3>
+        </header>
+    
+        <article class="article">
+            <p>Born in France and raised in New Zealand, Bassist, Keyboardist, Producer, Mix Engineer, Composer, and Arranger.</p>
+            <p><b>Pat Stewart</b> started playing bass in bands in High School, beginning a professional career as a Jazz and Pop Musician before the age of 18. Pat then completed a BMus in Jazz Performance on Double Bass and Electric Bass, during which he found a love of composition and production that has been a constant vein throughout his Musical expression ever since. </p>
+            <p>After spending several years playing and writing in original projects (Brockaflower/The Strowlini Orchestra) and as a session player (Louis Baker/Thomas Oliver/Zoë Moon/Deva Mahal), as well as Producer and Mix engineer (Funkacybin/Ryan Hendricks/Lucas Martinez Membrilla) Pat has relocated to Europe to continue study at the Koninklijk Conservatorium in Den Haag, The Netherlands.</p>
+            <p>Pat is available throughout Europe for Audio engineering, Teaching, and Performance.</p>
+        </article>
+    
+        <section id="slider">
+           
+            <input checked type='radio' name='slider' id='slide1'/>
+            <input type='radio' name='slider' id='slide2'/>
+            <input type='radio' name='slider' id='slide3'/>
+    
+            <div id="slides">
+                <div id="container">
+                    <div class="inner">
+                        <article class="image">
+                            <img src="/images/bio/bio_1_Pat Stewart.jpg"/>
+                        </article>
+                        <article class="image portrait">
+                            <!-- <div class='caption'>
+                                <bar>A Bubble on Flower</bar>
+                            </div> -->
+                            <img src="/images/bio/bio_2_Pat Stewart.jpg"/>
+                        </article>
+                        <article class="image">
+                            <!-- <div class='caption'>
+                                <bar>A Small Elephant <a href="#">read more</a></bar>
+                            </div> -->
+                            <img src="/images/bio/bio_3_Pat Stewart.jpg"/>
+                        </article>
+    
+                    </div>
+                </div>
+            </div>
+            <div id="commands">
+                <label for='slide1'></label>
+                <label for='slide2'></label>
+                <label for='slide3'></label>     
+            </div>
+            <div id="active">
+                <label for='slide1'></label>
+                <label for='slide2'></label>
+                <label for='slide3'></label>
+            </div>
+        </section>
+    
+    </section>
       
 <section class="discography" id="discography">
     <header>
@@ -144,7 +633,7 @@
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_6_Lucas Martinez Project - Light and Shadows.jpg" alt="">
+                        <img src="/images/discography/disc_6_Lucas Martinez Project - Light and Shadows.jpg" alt="">
                     </section>
                 
                     <section class="album-text">
@@ -164,7 +653,7 @@
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg" alt="">
+                        <img src="/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg" alt="">
                     </section>
                 
 
@@ -185,7 +674,7 @@
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg" alt="">
+                        <img src="/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg" alt="">
                     </section>
 
                     <section class="album-text">
@@ -205,7 +694,7 @@
                 <div class="album-media">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_3_Ash Broke - Broken Dreams.jpg" alt="">
+                        <img src="/images/discography/disc_3_Ash Broke - Broken Dreams.jpg" alt="">
                     </section>
                 
                     <section class="album-text">
@@ -225,7 +714,7 @@
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_2_Funkacybin - Voyager.jpg" alt="">
+                        <img src="/images/discography/disc_2_Funkacybin - Voyager.jpg" alt="">
                     </section>
                 
 
@@ -246,7 +735,7 @@
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_1_Brockaflower - Build It.jpg" alt="">
+                        <img src="/images/discography/disc_1_Brockaflower - Build It.jpg" alt="">
                     </section>
                 
 
@@ -272,8 +761,8 @@
     </main>
 </section>
 
-      <section class="contact" id="contact">
-    <h2>Contact</h2>
+      <!-- <section class="contact" id="contact">
+    <h3>Contact</h3>
     <div class="forms">
         <form action="" class="contact-form">
             <div class="field">
@@ -297,50 +786,32 @@
         </div>
 
     </div>
+</section>-->
+<section class="contact" id="contact">
+    <h3>Contact</h3>
+    <form class="form-label form-css-label">
+        <div class="fieldset">
+            <input class="input" id="name" name="fullname" type="text" autocomplete="off" required />
+            <label for="name">Name</label>
+        </div>
+
+        <div class="fieldset">
+            <input class="input" id="email" name="email" type="text" autocomplete="off" required />
+            <label for="email">Email</label>
+        </div>
+        <div class="fieldset">
+            <textarea class="input textarea" name="message" id="msg" cols="35" rows="5" required ></textarea>
+            <label for="msg">Message</label>
+        </div>
+    </form>
+
+    <div class="send">
+         <button type="submit">Send</button>
+    </div>
+
+
 </section>
 
-
-
-
-
-
-
-
-<!-- <div class="bg-contact2" style="background-image: url('images/bg-01.jpg');">
-    <div class="container-contact2">
-        <div class="wrap-contact2">
-            <form class="contact2-form validate-form">
-                <span class="contact2-form-title">
-                    Contact Us
-                </span>
-
-                <div class="wrap-input2 validate-input" data-validate="Name is required">
-                    <input class="input2" type="text" name="name">
-                    <span class="focus-input2" data-placeholder="NAME"></span>
-                </div>
-
-                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input2" type="text" name="email">
-                    <span class="focus-input2" data-placeholder="EMAIL"></span>
-                </div>
-
-                <div class="wrap-input2 validate-input" data-validate = "Message is required">
-                    <textarea class="input2" name="message"></textarea>
-                    <span class="focus-input2" data-placeholder="MESSAGE"></span>
-                </div>
-
-                <div class="container-contact2-form-btn">
-                    <div class="wrap-contact2-form-btn">
-                        <div class="contact2-form-bgbtn"></div>
-                        <button class="contact2-form-btn">
-                            Send Your Message
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div> -->
 
       <footer class="site-footer">
     <ul class="social-media">
