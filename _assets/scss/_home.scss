@@ -7,25 +7,14 @@
 
     /* Slider  */
 
-    
     .wrapper{
     width:100%;
     position:relative;
-    // margin:5% auto 0;
     }
 
-    /**
-    * Padding is set relative to the width
-    * of the element, so here padding-top:60% is
-    * a percentage of the width. This allows us 
-    * to set the height as a ratio of the width
-    *
-    */
     .carousel{
-        // width: 100%;
-        height: 85vh;
+        padding-top: 150%;
         position: relative;
-        padding-top: 100%;
         overflow: hidden;
     }
 
@@ -38,17 +27,13 @@
         left: 0;
         bottom: 0;
         right: 0;
-        padding: 0;
     }
 
     /**
     * ==========================
     * Animation styles
     * 
-    * Notes:
-    * 1. We use z-index to position active slides in-front 
-    * of non-active slides
-    * 2. We set right:0 and left:0 on .slide to provide us with
+    * We set right:0 and left:0 on .slide to provide us with
     * a default positioning on both sides of the slide. This allows 
     * us to trigger JS and CSS3 animations easily
     *
@@ -67,11 +52,9 @@
 
     .image-mobile {
         display: block;
-        width: auto;
-        height: 100%;
         position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        top: 0; left: 0; right: 0; bottom: 0;
     }
 
     .image-desctop {
@@ -80,6 +63,8 @@
 
     .landscape .image-mobile {
         height: 85%;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
 
 
@@ -180,9 +165,9 @@
     transition:background 0.3s ease-out;
     }
 
-    // .indicators li.active{background:#555454}
-
-    .indicators li:hover{background-color:#2b2b2b}
+    .indicators li:hover {
+        background-color:#222;
+    }
 
     .indicators li:first-child.active,
     .indicators li:nth-child(3).active {
@@ -194,12 +179,6 @@
         background:#000;
         border:2px solid #000;
     }
-
-    .bgcolor {
-        background:#000;
-        border:2px solid #000;
-    }
-
     
 
 
@@ -219,6 +198,7 @@
     border-right:3px solid #7c7b7b;
     cursor:pointer;
     transition:border-color 0.3s ease-out;
+    display: none;    
     }
 
     .arrow:hover{border-color:#93278f}
@@ -249,9 +229,9 @@
 
     @media (min-width: 760px) {
         .carousel {
-            padding-top: 0;
+            padding-top: 40%;
         }
-            
+
         .image-mobile {
             display: none;
         }
@@ -261,14 +241,18 @@
             width: 100%;
             height: auto;
             position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0; left: 0; right: 0; bottom: 0;
+            margin: 0 auto;
         }
 
         .landscape .image-desctop {
             width: auto;
             height: 100%;
         } 
+
+        .arrow {
+            display: inline-block;
+        }
     }
 
 

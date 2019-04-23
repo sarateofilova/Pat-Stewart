@@ -64,7 +64,7 @@
         position: absolute;
         top: 1em;
         left: 0;
-        color: #857373;
+        color: $color-headings;
         font-size: 1.4em;
         font-weight: normal;
         letter-spacing: 0.1rem;
@@ -88,7 +88,7 @@
         &[data-empty="false"] + label,
         &:valid + label,
         &:focus + label {
-          color: #111;
+          color: $color-black;
           font-weight: 700;
           font-size: 1em;
           transform: translate3d(0, -2em, 0);
@@ -108,7 +108,7 @@
       text-transform: uppercase;
       border-radius: 0.5rem;
       border: 0;
-      color: rgba(0,0,0,0.5)
+      color: $color-headings;
     }
   
     button:hover {
@@ -116,7 +116,7 @@
     }
     
     button:focus {
-        outline-color: #111;
+        outline-color: $color-black;
     }
 
 }
