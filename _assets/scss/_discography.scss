@@ -4,80 +4,82 @@
     justify-content: center;
     flex-wrap: wrap;
     
-}
 
-/* Discography header */
 
-/* Albums */
+    /* Discography header */
 
-.album-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-}
+    /* Albums */
 
-.album {
-    flex: 0 1 22rem;
-    overflow: hidden;
-    margin: 1.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-}
+    .album-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
 
-.album:hover {
-    transform: scale(1.1); 
-    transition: transform 0.4s;
-}
+    .album {
+        flex: 0 1 22em;
+        overflow: hidden;
+        margin: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 
-.album a {
-    text-decoration: none;
-}
+    .album:hover {
+        transform: scale(1.1); 
+        transition: transform 0.4s;
+    }
 
-.album-content {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 2rem;
-}
+    .album a {
+        text-decoration: none;
+    }
 
-.album-image {
-    flex: 0 1 100%;
-    height: auto;
-    position: relative;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(0,0,0,0.2);    
-    overflow: hidden;
-}
+    .album-content {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 2rem;
+    }
 
-.album-image:after {
-    display: block;
-    content: '';
-    padding-top: 100%;
-}
+    .album-image {
+        flex: 0 1 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(0,0,0,0.2);    
+        overflow: hidden;
+    }
 
-.album-image img {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(0,0,0,0.2);
-}
+    .album-image:after {
+        display: block;
+        content: '';
+        padding-top: 100%;
+    }
 
-.album-text h4, 
-.album-text p {
-    color: rgba(0,0,0,0.6);
-}
+    .album-image img {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(0,0,0,0.2);
+    }
 
-.album-text h4 {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
+    .album-text h4, 
+    .album-text p {
+        color: $color-headings;
+    }
 
-.album-text p {
-    padding: 1rem 0;
-}
+    .album-text h4 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
 
-.album-name {
-    text-transform: uppercase;
+    .album-text p {
+        padding: 1rem 0;
+    }
+
+    .album-name {
+        text-transform: uppercase;
+    }
+
 }

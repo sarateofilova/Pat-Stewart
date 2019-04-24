@@ -32,14 +32,12 @@ gulp.task("watch", function() {
 
 	gulp.watch( '_assets/scss/**/*.scss', gulp.series('scss') );
 
-	// gulp.watch( 'docs/**/*.html' ).on( 'change', browserSync.reload );
-	// gulp.watch( 'docs/**/*.js' ).on( 'change', browserSync.reload );
-
 	gulp.watch(
 		[
 		  "./*.html",
 		  "./_includes/*.html",
 		  "./_layouts/*.html",
+		  "./_albums/*.html",
 		  "./_posts/**/*.*"
 		],
 	).on('change', gulp.series('jekyll', 'scss') );

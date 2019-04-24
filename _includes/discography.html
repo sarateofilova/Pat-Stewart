@@ -4,129 +4,32 @@
         <h3>Discography</h3>
     </header>
 
-    <section class="album-list">
-
-        <article class="album">
-            <a href="album-6.html">
+    <ul class="album-list">
+            {% for album in site.albums %}
+        <li class="album">
+                
+            <a href="{{ site.baseurl }}{{ album.url }}">
+                   
 
                 <div class="album-content">
 
                     <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_6_Lucas Martinez Project - Light and Shadows.jpg" alt="">
+                        <img src="{{ site.baseurl }}{{ album.image_path }}" alt="">
                     </section>
                 
                     <section class="album-text">
-                            <h4 class="album-year">2018</h4>
-                            <h4 class="album-artist">Lucas Martinez Project
-                            <h4 class="album-name">LIGHT AND SHADOWS</h4>
-                            <p>Mix Engineer, Mastering Engineer</p>
+                            <h4 class="album-year">{{ album.year }}</h4>
+                            <h4 class="album-artist">{{ album.artist }}</h4>
+                            <h4 class="album-name">{{ album.album_title }}</h4>
+                            <p>{{ album.notes }}</p>
                     </section>
                 </div>
 
             </a>
-        </article>
+            
+        </li>
+            {% endfor %}
 
-        <article class="album">
-            <a href="album-5.html">
-
-                <div class="album-content">
-
-                    <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg" alt="">
-                    </section>
-                
-
-                    <section class="album-text">
-                            <h4 class="album-year">2018</h4>
-                            <h4 class="album-artist">Ryan Hendricks</h4>
-                            <h4 class="album-name">OLD ZEALAND</h4>                                    
-                            <p>Recording Engineer, Mix Engineer, Producer (Tracks 3, 5, 6, 8)</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-
-        <article class="album">
-            <a href="album-4.html">
-
-                <div class="album-content">
-
-                    <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg" alt="">
-                    </section>
-
-                    <section class="album-text">
-                        <h4 class="album-year">2016</h4>
-                        <h4 class="album-artist">The Strowlini Orchestra</h4>
-                        <h4 class="album-name">The Strowl</h4>
-                        <p>Producer, Composer, Arranger, Bass, Keys, Guitar, Mix Engineer</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-
-        <article class="album">
-            <a href="album-3.html">
-
-                <div class="album-media">
-
-                    <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_3_Ash Broke - Broken Dreams.jpg" alt="">
-                    </section>
-                
-                    <section class="album-text">
-                        <h4 class="album-year">2016</h4>
-                        <h4 class="album-artist">Ash Broke</h4>
-                        <h4 class="album-name">Broke'n Dreams</h4>
-                        <p>Mix Engineer, Bass</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-
-        <article class="album">
-            <a href="album-2.html">
-
-                <div class="album-content">
-
-                    <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_2_Funkacybin - Voyager.jpg" alt="">
-                    </section>
-                
-
-                    <section class="album-text">
-                        <h4 class="album-year">2015</h4>
-                        <h4 class="album-artist">Funkacybin</h4>
-                        <h4 class="album-name">Voyager</h4>
-                        <p>Producer, Mix Engineer</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-
-        <article class="album">
-            <a href="album-1.html">
-
-                <div class="album-content">
-
-                    <section class="album-image">
-                        <img src="{{ site.baseurl }}/images/discography/disc_1_Brockaflower - Build It.jpg" alt="">
-                    </section>
-                
-
-                    <section class="album-text">
-                        <h4 class="album-year">2014</h4>
-                        <h4 class="album-artist">Brockaflower</h4>
-                        <h4 class="album-name">Build It</h4>
-                        <p>Producer, Electronics, Keys, Bass</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-    </section>
+            
+    </ul>
 </section>

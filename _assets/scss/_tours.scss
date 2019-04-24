@@ -10,10 +10,6 @@ $baseurl: "{{ site.baseurl }}";
     background-repeat: no-repeat;
 }
 
-.tours-content {
-
-}
-
 .tours-header h3 {
-    color: #FFF;
+    color: $color-white;
 }

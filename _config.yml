@@ -8,12 +8,19 @@ url: "http://sarateofilova.github.io" # the base hostname & protocol for your si
 twitter_username: sarateofilova
 github_username:  sarateofilova
 
+permalink: pretty
+
+include: [albums]
 exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
 # markdown: kramdown
 # plugins:
 #   - jekyll-feed
   
+collections:
+  albums:
+    output: true 
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

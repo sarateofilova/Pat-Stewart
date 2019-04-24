@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "browser-sync": "^2.26.4",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-exec": "^3.0.2"
   },
   "devDependencies": {

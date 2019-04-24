@@ -23,16 +23,19 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon button-collapses"></span></label>
 
     <ul class="menu navHighlighter">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#discography">Discography</a></li>
-        <li><a href="#tours">Tours</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+            <a href="/Pat-Stewart/#home">Home</a>
+
+        </li>
+        <li><a href="/Pat-Stewart/#biography">Biography</a></li>
+        <li><a href="/Pat-Stewart/#discography">Discography</a></li>
+        <li><a href="/Pat-Stewart/#tours">Tours</a></li>
+        <li><a href="/Pat-Stewart/#contact">Contact</a></li>
     </ul>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-
+<!-- 
     <script>
         $(function() {
 
@@ -101,7 +104,7 @@ $(window).scroll(function(){
         if(scrollTop > top) {
             var id = $(this).attr('id');
             $('.nav-active').removeClass('nav-active');
-            $('a[href="#'+id+'"]').parent().addClass('nav-active');
+            $('a[href="/Pat-Stewart'+id+'"]').parent().addClass('nav-active');
         }
         tops.push(top);
     });
@@ -109,39 +112,39 @@ $(window).scroll(function(){
 });
 });
 
-    </script>
-
+    </script> -->
 
 
 </header>
       
 
-      <section class="home" id="home">
+      <main>
+        <section class="home" id="home">
     <div class="wrapper">
 
-        <div class="carousel">
-            <div class="inner">
-                <div class="slide active">
-                    <img class="image-mobile" src="/Pat-Stewart/images/home/home_1_Pat Stewart.jpg" alt="">
-                    <img class="image-desctop" src="/Pat-Stewart/images/home/hom_1_Pat Stewart_1024px.jpg" alt="">
-                </div>
-                <div class="slide landscape">
-                    <img class="image-mobile" src="/Pat-Stewart/images/home/home_2_Pat Stewart.jpg" alt="">
-                    <img class="image-desctop" src="/Pat-Stewart/images/home/home_2_Pat Stewart_1024px.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img class="image-mobile" src="/Pat-Stewart/images/home/home_3_Pat Stewart.jpg" alt="">                
-                    <img class="image-desctop" src="/Pat-Stewart/images/home/home_3_Pat Stewart_1024px.jpg" alt="">                
-                </div>
-            </div>
-            <div class="arrows">
-                <div class="arrow arrow-left"></div>
-                <div class="arrow arrow-right"></div>
-            </div>
-        </div>
-        
-    </div>
-		<script type="text/JavaScript">
+			<div class="carousel">
+					<div class="inner">
+							<div class="slide active">
+									<img class="image-mobile" src="/Pat-Stewart/images/home/home_1_Pat Stewart.jpg" alt="">
+									<img class="image-desctop" src="/Pat-Stewart/images/home/hom_1_Pat Stewart_1024px.jpg" alt="">
+							</div>
+							<div class="slide landscape">
+									<img class="image-mobile" src="/Pat-Stewart/images/home/home_2_Pat Stewart.jpg" alt="">
+									<img class="image-desctop" src="/Pat-Stewart/images/home/home_2_Pat Stewart_1024px.jpg" alt="">
+							</div>
+							<div class="slide">
+									<img class="image-mobile" src="/Pat-Stewart/images/home/home_3_Pat Stewart.jpg" alt="">                
+									<img class="image-desctop" src="/Pat-Stewart/images/home/home_3_Pat Stewart_1024px.jpg" alt="">                
+							</div>
+					</div>
+					<div class="arrows">
+							<div class="arrow arrow-left"></div>
+							<div class="arrow arrow-right"></div>
+					</div>
+			</div>
+			
+	</div>
+		<script>
 
 /*
  * We trigger the factory() function is different
@@ -563,7 +566,6 @@ $('.carousel').Zippy(args);
 
 </section>
 
-      
 
 <section class="bio" id='biography'>
         <header>
@@ -590,15 +592,9 @@ $('.carousel').Zippy(args);
                             <img src="/Pat-Stewart/images/bio/bio_1_Pat Stewart.jpg"/>
                         </article>
                         <article class="image portrait">
-                            <!-- <div class='caption'>
-                                <bar>A Bubble on Flower</bar>
-                            </div> -->
                             <img src="/Pat-Stewart/images/bio/bio_2_Pat Stewart.jpg"/>
                         </article>
                         <article class="image">
-                            <!-- <div class='caption'>
-                                <bar>A Small Elephant <a href="#">read more</a></bar>
-                            </div> -->
                             <img src="/Pat-Stewart/images/bio/bio_3_Pat Stewart.jpg"/>
                         </article>
     
@@ -618,16 +614,64 @@ $('.carousel').Zippy(args);
         </section>
     
     </section>
-      
+
 <section class="discography" id="discography">
     <header>
         <h3>Discography</h3>
     </header>
 
-    <section class="album-list">
+    <ul class="album-list">
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/Broken_Dreams/">
+                   
 
-        <article class="album">
-            <a href="album-6.html">
+                <div class="album-content">
+
+                    <section class="album-image">
+                        <img src="/Pat-Stewart/images/discography/disc_3_Ash Broke - Broken Dreams.jpg" alt="">
+                    </section>
+                
+                    <section class="album-text">
+                            <h4 class="album-year">2016</h4>
+                            <h4 class="album-artist">Ash Broke</h4>
+                            <h4 class="album-name">Broke'n Dreams</h4>
+                            <p>Mix Engineer, Bass</p>
+                    </section>
+                </div>
+
+            </a>
+            
+        </li>
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/Build%20_It/">
+                   
+
+                <div class="album-content">
+
+                    <section class="album-image">
+                        <img src="/Pat-Stewart/images/discography/disc_1_Brockaflower - Build It.jpg" alt="">
+                    </section>
+                
+                    <section class="album-text">
+                            <h4 class="album-year">2014</h4>
+                            <h4 class="album-artist">Brockaflower</h4>
+                            <h4 class="album-name">Build It</h4>
+                            <p>Producer, Electronics, Keys, Bass</p>
+                    </section>
+                </div>
+
+            </a>
+            
+        </li>
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/Light_Shadows/">
+                   
 
                 <div class="album-content">
 
@@ -637,17 +681,20 @@ $('.carousel').Zippy(args);
                 
                     <section class="album-text">
                             <h4 class="album-year">2018</h4>
-                            <h4 class="album-artist">Lucas Martinez Project
-                            <h4 class="album-name">LIGHT AND SHADOWS</h4>
+                            <h4 class="album-artist">Lucas Martinez Project</h4>
+                            <h4 class="album-name">Ligth And Shadows</h4>
                             <p>Mix Engineer, Mastering Engineer</p>
                     </section>
                 </div>
 
             </a>
-        </article>
-
-        <article class="album">
-            <a href="album-5.html">
+            
+        </li>
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/Old_Zealand/">
+                   
 
                 <div class="album-content">
 
@@ -655,60 +702,45 @@ $('.carousel').Zippy(args);
                         <img src="/Pat-Stewart/images/discography/disc_5_Ryan Hendricks - Old Zealand.jpg" alt="">
                     </section>
                 
-
                     <section class="album-text">
                             <h4 class="album-year">2018</h4>
                             <h4 class="album-artist">Ryan Hendricks</h4>
-                            <h4 class="album-name">OLD ZEALAND</h4>                                    
+                            <h4 class="album-name">OLD ZEALAND</h4>
                             <p>Recording Engineer, Mix Engineer, Producer (Tracks 3, 5, 6, 8)</p>
                     </section>
                 </div>
 
             </a>
-        </article>
-
-        <article class="album">
-            <a href="album-4.html">
+            
+        </li>
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/The_Strowl/">
+                   
 
                 <div class="album-content">
 
                     <section class="album-image">
                         <img src="/Pat-Stewart/images/discography/disc_4_The Strowlini Orchestra - The Strowl.jpg" alt="">
                     </section>
-
-                    <section class="album-text">
-                        <h4 class="album-year">2016</h4>
-                        <h4 class="album-artist">The Strowlini Orchestra</h4>
-                        <h4 class="album-name">The Strowl</h4>
-                        <p>Producer, Composer, Arranger, Bass, Keys, Guitar, Mix Engineer</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-
-        <article class="album">
-            <a href="album-3.html">
-
-                <div class="album-media">
-
-                    <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_3_Ash Broke - Broken Dreams.jpg" alt="">
-                    </section>
                 
                     <section class="album-text">
-                        <h4 class="album-year">2016</h4>
-                        <h4 class="album-artist">Ash Broke</h4>
-                        <h4 class="album-name">Broke'n Dreams</h4>
-                        <p>Mix Engineer, Bass</p>
+                            <h4 class="album-year">2016</h4>
+                            <h4 class="album-artist">The Strowlini Orchestra</h4>
+                            <h4 class="album-name">The Strowl</h4>
+                            <p>Producer, Composer, Arranger, Bass, Keys, Guitar, Mix Engineer</p>
                     </section>
                 </div>
 
             </a>
-        </article>
-
-        <article class="album">
-            <a href="album-2.html">
+            
+        </li>
+            
+        <li class="album">
+                
+            <a href="/Pat-Stewart/albums/Voyager/">
+                   
 
                 <div class="album-content">
 
@@ -716,41 +748,23 @@ $('.carousel').Zippy(args);
                         <img src="/Pat-Stewart/images/discography/disc_2_Funkacybin - Voyager.jpg" alt="">
                     </section>
                 
-
                     <section class="album-text">
-                        <h4 class="album-year">2015</h4>
-                        <h4 class="album-artist">Funkacybin</h4>
-                        <h4 class="album-name">Voyager</h4>
-                        <p>Producer, Mix Engineer</p>
+                            <h4 class="album-year">2015</h4>
+                            <h4 class="album-artist">Funkacybin</h4>
+                            <h4 class="album-name">Voyager</h4>
+                            <p>Producer, Mix Engineer</p>
                     </section>
                 </div>
 
             </a>
-        </article>
+            
+        </li>
+            
 
-        <article class="album">
-            <a href="album-1.html">
-
-                <div class="album-content">
-
-                    <section class="album-image">
-                        <img src="/Pat-Stewart/images/discography/disc_1_Brockaflower - Build It.jpg" alt="">
-                    </section>
-                
-
-                    <section class="album-text">
-                        <h4 class="album-year">2014</h4>
-                        <h4 class="album-artist">Brockaflower</h4>
-                        <h4 class="album-name">Build It</h4>
-                        <p>Producer, Electronics, Keys, Bass</p>
-                    </section>
-                </div>
-
-            </a>
-        </article>
-    </section>
+            
+    </ul>
 </section>
-      
+
 <section class="tours" id="tours">
     <main class="tours-content">
         <header class="tours-header">
@@ -760,7 +774,7 @@ $('.carousel').Zippy(args);
     </main>
 </section>
 
-      <!-- <section class="contact" id="contact">
+<!-- <section class="contact" id="contact">
     <h3>Contact</h3>
     <div class="forms">
         <form action="" class="contact-form">
@@ -812,13 +826,16 @@ $('.carousel').Zippy(args);
 </section>
 
 
+
+      </main>
+
       <footer class="site-footer">
     <ul class="social-media">
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fab fa-soundcloud"></i></a></li>
-        <li><a href="#"><i class="fab fa-spotify"></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/StrowliniOrchestraNZ/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/strowligno/?hl=en"><i class="fab fa-instagram"></i></a></li>
+        <li><a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+        <li><a target="_blank" href="https://soundcloud.com/pea-stew" ><i class="fab fa-soundcloud"></i></a></li>
+        <li><a target="_blank" href="https://open.spotify.com/artist/2QZxD0D1Bhdwhv68Twgtmb"><i class="fab fa-spotify"></i></a></li>
     </ul>
 </footer>
 
