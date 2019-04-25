@@ -1,18 +1,16 @@
 .album-page {
-    max-width: 60rem;
-    height: 90vh;
+    max-width: 90vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: 1 1fr;
+    grid-template-rows: repeat(8, 100px);
     justify-content: center;
-
     grid-column-gap: 0;
-    grid-row-gap: 1rem;
+    grid-row-gap: 2rem;
 
     h2 {
         grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column-end: 2;
         text-align: center;
         letter-spacing: 0.1rem;
         font-weight: 600;
@@ -20,29 +18,29 @@
     }
 
     .album-image {
+        text-align: center;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 5;
-        width: 30vw;
         overflow: hidden;
-        border: 1px solid rgba(0,0,0,0.2);
         position: relative;
 
         img {
-           display: block;
-           width: 100%;
-           position: absolute;
-           top: 50%; left: 50%;
-           transform: translate(-50%, -50%);
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(0,0,0,0.2);
         }
     }
 
     .content {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 8;
         
         h6, span {
             color: $color-headings;
@@ -55,6 +53,35 @@
         p {
             padding-top: 1rem;
             color: $color-text;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        & {
+            max-width: 60rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            height: 90vh;
+        } 
+
+        h2 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .album-image {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 5;
+            width: 30vw;
+        }
+
+        .content {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 5;
         }
     }
 
